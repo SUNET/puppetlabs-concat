@@ -28,7 +28,7 @@ define concat::fragment(
     $target,
     $content = undef,
     $source  = undef,
-    $order   = 10,
+    $order   = '10',
     $ensure  = 'present',
     $mode    = undef,
     $owner   = undef,
