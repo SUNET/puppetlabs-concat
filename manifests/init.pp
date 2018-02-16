@@ -100,7 +100,9 @@ define concat(
       default => $warn_message,
     }
   } else {
-    $use_warn_message = undef
+    #$use_warn_message = undef
+    # ft@ regsubst() below will fail on undef value with Puppet 4.x
+    $use_warn_message = ''
   }
 
   $warnmsg_escaped = regsubst($use_warn_message, '\'', '\'\\\'\'', 'G')
